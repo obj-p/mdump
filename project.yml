@@ -1,0 +1,27 @@
+name: mdump
+options:
+  bundleIdPrefix: com.mdump
+  deploymentTarget:
+    macOS: 13.0
+settings:
+  base:
+    GENERATE_INFOPLIST_FILE: true
+
+targets:
+  MDCoreSimulator:
+    type: framework
+    platform: macOS
+    sources: Sources/MDCoreSimulator
+    headers: Sources/MDCoreSimulator
+    dependencies:
+      - target: MDFramework
+  MDCoreSimulatorTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources: Tests/MDCoreSimulatorTests
+    dependencies:
+      - target: MDCoreSimulator
+  MDFramework:
+    type: framework
+    platform: macOS
+    sources: Sources/MDFramework

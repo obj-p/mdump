@@ -7,3 +7,9 @@ brew:
 .PHONY: pre-commit-install
 pre-commit-install:
 	@pre-commit install
+
+## Development
+
+.PHONY: xcodeproj
+xcodeproj:
+	@xcodegen
