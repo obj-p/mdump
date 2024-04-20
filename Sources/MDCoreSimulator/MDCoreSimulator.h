@@ -1,10 +1,9 @@
 @import MDFramework;
 @import Foundation;
 
-#import <CoreSimulator/SimDeviceType.h>
+#import <MDCoreSimulator/MDSimDeviceType.h>
 
 @interface MDCoreSimulator : NSObject <MDFramework>
-
-+ (SimDeviceType *)foobar;
-
 @end
+
+@compatibility_alias CoreSimulator MDCoreSimulator;

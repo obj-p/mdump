@@ -14,10 +14,10 @@
 
 + (id)foobar {
     Class serviceContextClass = objc_lookUpClass("SimServiceContext");
-    Class simDeviceType = objc_lookUpClass("SimDeviceType");
-    SimDeviceType *foobar = [[simDeviceType alloc] init];
+//    Class simDeviceType = objc_lookUpClass("SimDeviceType");
+//    SimDeviceType *foobar = [[simDeviceType alloc] init];
     
-    NSLog(@"%@", [foobar bundlePath]);
+//    NSLog(@"%@", [foobar bundlePath]);
     
     int numClasses;
     Class *classes = NULL;

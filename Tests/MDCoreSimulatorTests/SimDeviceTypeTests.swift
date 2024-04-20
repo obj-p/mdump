@@ -4,7 +4,8 @@ import XCTest
 
 final class SimDeviceTypeTests: XCTestCase {
     func testExample() throws {
-        MDCoreSimulator.foobar()
-        SimDeviceType()
+        let foo = SimDeviceType()
+        print(foo.bundle)
+        print(foo.modelIdentifier)
     }
 }

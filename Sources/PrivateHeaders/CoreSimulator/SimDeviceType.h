@@ -3,7 +3,7 @@
 #include <CoreSimulator/SimDeviceIODeviceTypeInterface-Protocol.h>
 #include <CoreSimulator/SimProfileBundle.h>
 
-@interface SimDeviceType : NSObject <SimDeviceIODeviceTypeInterface>
+@interface FooSimDeviceType : NSObject <SimDeviceIODeviceTypeInterface>
 
 @property (retain, nonatomic) SimProfileBundle *bundle;
 @property (copy, nonatomic) NSString *modelIdentifier;
