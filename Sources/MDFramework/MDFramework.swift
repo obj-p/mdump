@@ -4,12 +4,14 @@ import Foundation
     static var bundlePath: String { get }
 }
 
+public struct BundlePathError: Error {
+    public let path: String
+}
+
 public extension MDFramework {
     static func loadBundle() throws {
-        let bundle = Bundle(path: bundlePath)
-        guard let bundle else {
-            // TODO: throw specific error
-            return
+        guard let bundle = Bundle(path: bundlePath) else {
+            throw BundlePathError(path: bundlePath)
         }
 
         try bundle.loadAndReturnError()

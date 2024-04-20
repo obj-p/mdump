@@ -12,4 +12,5 @@ pre-commit-install:
 
 .PHONY: xcodeproj
 xcodeproj:
+	@rm -rf mdump.xcodeproj
 	@xcodegen

@@ -11,6 +11,8 @@ targets:
   MDCoreSimulator:
     type: framework
     platform: macOS
+    settings:
+      HEADER_SEARCH_PATHS: $(SRCROOT)/Sources/PrivateHeaders
     sources: Sources/MDCoreSimulator
     headers: Sources/MDCoreSimulator
     dependencies:
@@ -21,6 +23,10 @@ targets:
     sources: Tests/MDCoreSimulatorTests
     dependencies:
       - target: MDCoreSimulator
+    info:
+      path: Tests/MDCoreSimulatorTests/Info.plist
+      properties:
+        NSPrincipalClass: MDCoreSimulatorTests.SetupTests
   MDFramework:
     type: framework
     platform: macOS
