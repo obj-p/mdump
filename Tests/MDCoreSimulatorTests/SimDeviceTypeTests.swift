@@ -5,8 +5,7 @@ import XCTest
 final class SimDeviceTypeTests: XCTestCase {
     func testExample() throws {
         // TODO: pass legit bundle
-        let sim = try SimDeviceType(bundle: Bundle.main)
-        // TODO: swiftyfyi?
-        print(sim.modelIdentifier)
+        let simDeviceType = try SimDeviceType(bundle: Bundle.main)
+        XCTAssertEqual("", simDeviceType.modelIdentifier)
     }
 }

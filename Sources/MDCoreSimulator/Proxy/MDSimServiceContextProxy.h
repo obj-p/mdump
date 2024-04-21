@@ -1,8 +1,5 @@
-#import <Foundation/Foundation.h>
 #import <MDCoreSimulator/SimServiceContextProtocol.h>
+#import <MDFramework/MDFramework.h>
 
-@interface MDSimServiceContextProxy : NSProxy <SimServiceContextProtocol>
-
-- (instancetype)init;
-
+@interface MDSimServiceContextProxy : MD_PROXY_PROTOCOL(SimServiceContextProtocol)
 @end
