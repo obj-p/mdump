@@ -1,5 +1,6 @@
+#import "MDProxy.h"
+
 #import <Foundation/Foundation.h>
-#import <MDFramework/MDProxy.h>
 
 @implementation MDProxy
 

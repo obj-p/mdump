@@ -1,5 +1,6 @@
+#import "MDSimServiceContextProxy.h"
+
 #import <MDCoreSimulator/MDSimDeviceTypeProxy.h>
-#import <MDCoreSimulator/MDSimServiceContextProxy.h>
 #import <MDFramework/Macros.h>
 #import <objc/runtime.h>
 
