@@ -2,15 +2,16 @@
 
 #import <objc/runtime.h>
 
-MD_IGNORED_PROTOCOL_BEGIN
+MD_PROXY_IGNORED_IMPL_BEGIN
 @implementation MDSimProfileBundle
 
 @dynamic localInfoDictionary, infoPlistPath;
 
+MD_PROXY_LOOKUP_TARGET_CLASS_IMPL(SimProfileBundle)
+
 - (instancetype)initWithPath:(NSString *)path error:(NSError **)error
 {
-    Class klass = objc_lookUpClass("SimProfileBundle");
-    id target = [[klass alloc] initWithPath:path error:error];
+    id target = [[self.class.targetClass alloc] initWithPath:path error:error];
     
     if (target == NULL) {
         return NULL;
@@ -20,4 +21,4 @@ MD_IGNORED_PROTOCOL_BEGIN
 }
 
 @end
-MD_IGNORED_PROTOCOL_END
+MD_PROXY_IGNORED_IMPL_END

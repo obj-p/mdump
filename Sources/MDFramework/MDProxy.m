@@ -1,8 +1,17 @@
 #import "MDProxy.h"
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 @implementation MDProxy
+
++ (BOOL)respondsToSelector:(SEL)aSelector {
+    return class_respondsToSelector(self.targetClass, aSelector);
+}
+
++ (Class)targetClass {
+    return Nil;
+}
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
@@ -12,6 +21,7 @@
 
 - (instancetype)initWithTarget:(NSObject *)target
 {
+    NSParameterAssert([target isKindOfClass:self.class.targetClass]);
     _target = target;
     return self;
 }
