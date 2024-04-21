@@ -4,8 +4,9 @@ import XCTest
 
 final class SimDeviceTypeTests: XCTestCase {
     func testExample() throws {
-        let foo = SimDeviceType()
-        print(foo.bundle)
-        print(foo.modelIdentifier)
+        // TODO: pass legit bundle
+        let sim = try SimDeviceType(bundle: Bundle.main)
+        // TODO: swiftyfyi?
+        print(sim.modelIdentifier)
     }
 }

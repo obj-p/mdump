@@ -11,8 +11,6 @@ targets:
   MDCoreSimulator:
     type: framework
     platform: macOS
-    settings:
-      HEADER_SEARCH_PATHS: $(SRCROOT)/Sources/PrivateHeaders
     sources: Sources/MDCoreSimulator
     headers: Sources/MDCoreSimulator
     dependencies:
@@ -31,3 +29,4 @@ targets:
     type: framework
     platform: macOS
     sources: Sources/MDFramework
+    headers: Sources/MDFramework
