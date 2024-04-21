@@ -1,5 +1,6 @@
 #import <MDCoreSimulator/MDSimDeviceTypeProxy.h>
 #import <MDCoreSimulator/MDSimServiceContextProxy.h>
+#import <MDFramework/Macros.h>
 #import <objc/runtime.h>
 
 MD_IGNORED_PROTOCOL_BEGIN

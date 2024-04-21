@@ -4,10 +4,9 @@
 
 @protocol SimDeviceTypeProtocol
 
-@property (retain, nonatomic, nullable) SimProfileBundle *bundle;
+@property (retain, nonatomic, nullable) NSBundle *bundle; // TODO: this is a SimProfileBundle
 @property (copy, nonatomic, nullable) NSString *modelIdentifier;
 
-- (nonnull id)foobar;
 - (nullable instancetype)initWithBundle:(nonnull NSBundle *)bundle error:(NSError * _Nullable * _Nullable)error;
 
 @end

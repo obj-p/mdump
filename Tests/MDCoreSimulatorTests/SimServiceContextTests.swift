@@ -7,6 +7,10 @@ final class SimServiceContextTests: XCTestCase {
         let dir = "/Applications/Xcode.app/Contents/Developer"
         let simServiceContext = try SimServiceContext.sharedServiceContext(forDeveloperDir: dir)
         let supportedDeviceTypes = simServiceContext.supportedDeviceTypes
-        print(supportedDeviceTypes)
+        let iPhone8 = supportedDeviceTypes.first { simDeviceType in
+            simDeviceType.modelIdentifier == "iPhone8,1"
+        }
+        
+        XCTAssertNotNil(iPhone8)
     }
 }
