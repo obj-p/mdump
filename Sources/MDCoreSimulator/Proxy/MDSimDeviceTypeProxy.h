@@ -2,5 +2,5 @@
 
 #import <MDCoreSimulator/SimDeviceTypeProtocol.h>
 
-@interface MDSimDeviceTypeProxy : MDProxy<NSObject <SimDeviceTypeProtocol> *> <SimDeviceTypeProtocol>
+@interface MDSimDeviceTypeProxy : MD_PROXY_PROTOCOL(SimDeviceTypeProtocol)
 @end
