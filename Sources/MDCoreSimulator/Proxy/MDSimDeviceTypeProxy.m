@@ -1,7 +1,5 @@
-@import ObjectiveC;
-@import MDFramework;
-
 #import <MDCoreSimulator/MDSimDeviceTypeProxy.h>
+#import <objc/runtime.h>
 
 @implementation MDSimDeviceTypeProxy
 

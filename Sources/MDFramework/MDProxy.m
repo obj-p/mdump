@@ -1,5 +1,4 @@
-@import Foundation;
-
+#import <Foundation/Foundation.h>
 #import <MDFramework/MDProxy.h>
 
 @implementation MDProxy

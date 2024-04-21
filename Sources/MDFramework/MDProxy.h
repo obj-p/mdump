@@ -1,4 +1,4 @@
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 #define MD_PROXY_PROTOCOL(protocol) MDProxy<NSObject <protocol> *> <protocol>
 

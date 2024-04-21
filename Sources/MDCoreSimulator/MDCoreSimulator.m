@@ -1,5 +1,4 @@
-@import Foundation;
-
+#import <Foundation/Foundation.h>
 #import <MDCoreSimulator/MDCoreSimulator.h>
 
 @implementation MDCoreSimulator
