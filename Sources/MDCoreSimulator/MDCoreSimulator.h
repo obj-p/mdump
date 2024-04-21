@@ -1,5 +1,4 @@
 @import MDFramework;
-@import Foundation;
 
 #import <MDCoreSimulator/MDSimDeviceTypeProxy.h>
 #import <MDCoreSimulator/MDSimServiceContextProxy.h>

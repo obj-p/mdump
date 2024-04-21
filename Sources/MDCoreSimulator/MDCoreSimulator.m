@@ -1,4 +1,4 @@
-@import ObjectiveC;
+@import Foundation;
 
 #import <MDCoreSimulator/MDCoreSimulator.h>
 
