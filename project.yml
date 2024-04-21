@@ -10,6 +10,7 @@ settings:
     ENABLE_USER_SCRIPT_SANDBOXING: true
     GENERATE_INFOPLIST_FILE: true
     MODULE_VERIFIER_SUPPORTED_LANGUAGES: objective-c objective-c++
+    MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS: gnu11 gnu++14
 
 targets:
   MDCoreSimulator:
