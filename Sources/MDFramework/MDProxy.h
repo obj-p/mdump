@@ -1,13 +1,11 @@
 #import <Foundation/Foundation.h>
 
-#define MD_PROXY_PROTOCOL(protocol) MDProxy<NSObject <protocol> *> <protocol>
-
 NS_ASSUME_NONNULL_BEGIN
-@interface MDProxy<Target: NSObject *> : NSProxy
+@interface MDProxy : NSProxy
 
-@property (readonly, nonatomic) Target target;
+@property (readonly, nonatomic) NSObject *target;
 
-- (instancetype)initWithTarget:(Target)target;
+- (instancetype)initWithTarget:(NSObject *)target;
 
 @end
 NS_ASSUME_NONNULL_END

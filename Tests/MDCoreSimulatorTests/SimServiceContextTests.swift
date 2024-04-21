@@ -4,13 +4,14 @@ import XCTest
 
 final class SimServiceContextTests: XCTestCase {
     func testExample() throws {
-        let dir = "/Applications/Xcode.app/Contents/Developer"
-        let simServiceContext = try SimServiceContext.sharedServiceContext(forDeveloperDir: dir)
+        let simServiceContext = try SimServiceContext.sharedServiceContext(forDeveloperDir: Directories.developer)
         let supportedDeviceTypes = simServiceContext.supportedDeviceTypes
-        let iPhone8 = supportedDeviceTypes.first { simDeviceType in
-            simDeviceType.modelIdentifier == "iPhone8,1"
-        }
+        let iPhone14 = supportedDeviceTypes
+            .map(SimDeviceType.init(target:))
+            .first { simDeviceType in
+                simDeviceType.modelIdentifier == "iPhone14,7"
+            }
         
-        XCTAssertNotNil(iPhone8)
+        XCTAssertNotNil(iPhone14)
     }
 }

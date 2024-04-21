@@ -6,15 +6,7 @@
 MD_IGNORED_PROTOCOL_BEGIN
 @implementation MDSimServiceContextProxy
 
-- (NSArray *)supportedDeviceTypes
-{
-    NSMutableArray *simDeviceTypes = [NSMutableArray array];
-    [[self.target supportedDeviceTypes] enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [simDeviceTypes addObject:[[MDSimDeviceTypeProxy alloc] initWithTarget:obj]];
-    }];
-
-    return simDeviceTypes;
-}
+@dynamic supportedDeviceTypes;
 
 + (instancetype)sharedServiceContextForDeveloperDir:(NSString *)dir error:(NSError **)error {
     Class klass = objc_lookUpClass("SimServiceContext");

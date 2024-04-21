@@ -1,9 +1,8 @@
 #import <Foundation/Foundation.h>
-#import <MDCoreSimulator/SimDeviceTypeProtocol.h>
 
 @protocol SimServiceContextProtocol
 
-@property (readonly, nonatomic) NSArray <MDSimDeviceTypeProxy *> * _Nonnull supportedDeviceTypes;
+@property (readonly, nonatomic, nonnull) NSArray <NSObject *> *supportedDeviceTypes;
 
 - (nonnull NSArray *)allDeviceSets;
 
