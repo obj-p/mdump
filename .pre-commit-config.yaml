@@ -9,6 +9,12 @@ repos:
     -   id: trailing-whitespace
 -   repo: local
     hooks:
+    -   id: clang-format
+        name: clang-format
+        entry: clang-format -i
+        args: ["-style=file"]
+        language: system
+        types: [objective-c]
     -   id: shellcheck
         name: ShellCheck
         entry: shellcheck

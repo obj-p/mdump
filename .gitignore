@@ -6,11 +6,12 @@ Brewfile.lock.json
 
 .DS_Store
 
-## SWift Package Manager
+## Swift Package Manager
 
 .build/
 .swiftpm/
 
 ## Xcode
 
+*.xcodeproj/
 xcuserdata/

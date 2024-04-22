@@ -36,3 +36,5 @@ do
     mkdir -p "$output_dir"
     ipsw class-dump "$xcframework" -o "$output_dir" --arch x86_64 --headers
 done
+
+# ipsw class-dump /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/Current/CoreSimulator -o raw --arch ARM64 --headers
