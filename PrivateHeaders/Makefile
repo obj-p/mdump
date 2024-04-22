@@ -6,15 +6,15 @@ framework_dirs := /Applications/Xcode.app/Contents/Developer/Library/PrivateFram
 frameworks     := $(foreach dir,$(framework_dirs),$(shell find $(dir) -name "*.framework" -maxdepth 1))
 targets        := $(foreach framework,$(frameworks),$(basename $(notdir $(framework))))
 
-# ex. $(call class_dump,/Library/Developer/PrivateFrameworks/CoreDevice.framework)
-define class_dump
+# ex. $(call framework_dump,/Library/Developer/PrivateFrameworks/CoreDevice.framework)
+define framework_dump
 	@ipsw class-dump "$(2)/Versions/Current/$(basename $(notdir $(1)))" --arch $(ARCH) --headers || true
 endef
 
 # ex. $(call framework_dump_rule,CoreDevice,/Library/Developer/PrivateFrameworks/CoreDevice.framework)
 define framework_dump_rule
 $(1):
-	@$(call class_dump,$(1),$(2))
+	@$(call framework_dump,$(1),$(2))
 endef
 
 all: $(targets)
