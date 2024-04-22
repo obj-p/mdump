@@ -13,4 +13,3 @@ When a `",?` is specified it represents a property that has been marked as `@opt
 @end
 ```
 *Referenced from [Support the optional property attributes in mtl_copyPropertyAttributes](https://github.com/Mantle/Mantle/issues/899)*
-
