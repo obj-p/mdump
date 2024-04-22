@@ -8,17 +8,13 @@ targets        := $(foreach framework,$(frameworks),$(basename $(notdir $(framew
 
 # ex. $(call class_dump,/Library/Developer/PrivateFrameworks/CoreDevice.framework)
 define class_dump
-	@ipsw class-dump "$(2)/Versions/Current/$(basename $(notdir $(1)))" --arch $(ARCH) --headers
+	@ipsw class-dump "$(2)/Versions/Current/$(basename $(notdir $(1)))" --arch $(ARCH) --headers || true
 endef
 
 # ex. $(call framework_dump_rule,CoreDevice,/Library/Developer/PrivateFrameworks/CoreDevice.framework)
 define framework_dump_rule
 $(1):
 	@$(call class_dump,$(1),$(2))
-endef
-
-define foo
-	foo bar baz
 endef
 
 all: $(targets)
