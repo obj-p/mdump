@@ -7,7 +7,7 @@ final class SimDeviceTypeTests: XCTestCase {
         // Given
         let bundlePath = Directories.deviceType(.iPhone14_7)
         let simProfileBundle = try SimProfileBundle(path: bundlePath)
-        
+
         // When
         let simDeviceType = try SimDeviceType(bundle: simProfileBundle)
 

@@ -4,10 +4,10 @@
 
 @interface MDSimServiceContext : MDProxy
 
-@property (readonly, nonatomic, nonnull) NSArray <MDSimDeviceType *> *supportedDeviceTypes;
+@property (readonly, nonatomic, nonnull) NSArray<MDSimDeviceType *> *supportedDeviceTypes;
 
 + (nullable instancetype)sharedServiceContextForDeveloperDir:(nonnull NSString *)dir
-                                                       error:(NSError * _Nullable * _Nullable)error;
+                                                       error:(NSError *_Nullable *_Nullable)error;
 
 - (nonnull NSArray *)allDeviceSets;
 

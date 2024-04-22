@@ -7,7 +7,7 @@
 
 + (nonnull NSDictionary *)extraCheckMap;
 
-- (nullable instancetype)initWithPath:(nonnull NSString *)path error:(NSError * _Nullable * _Nullable)error;
+- (nullable instancetype)initWithPath:(nonnull NSString *)path error:(NSError *_Nullable *_Nullable)error;
 - (BOOL)isEqualToProfile:(nullable id)profile;
 
 @end

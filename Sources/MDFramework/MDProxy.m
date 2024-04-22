@@ -5,11 +5,13 @@
 
 @implementation MDProxy
 
-+ (BOOL)respondsToSelector:(SEL)aSelector {
++ (BOOL)respondsToSelector:(SEL)aSelector
+{
     return class_respondsToSelector(self.targetClass, aSelector);
 }
 
-+ (Class)targetClass {
++ (Class)targetClass
+{
     return Nil;
 }
 

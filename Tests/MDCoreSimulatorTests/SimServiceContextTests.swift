@@ -9,7 +9,7 @@ final class SimServiceContextTests: XCTestCase {
         let iPhone14 = supportedDeviceTypes.first { simDeviceType in
             simDeviceType.modelIdentifier == "iPhone14,7"
         }
-        
+
         XCTAssertNotNil(iPhone14)
     }
 }

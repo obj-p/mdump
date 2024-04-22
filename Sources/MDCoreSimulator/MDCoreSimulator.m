@@ -4,7 +4,8 @@
 
 @implementation MDCoreSimulator
 
-+ (NSString *)bundlePath {
++ (NSString *)bundlePath
+{
     return @"/Library/Developer/PrivateFrameworks/CoreSimulator.framework";
 }
 
