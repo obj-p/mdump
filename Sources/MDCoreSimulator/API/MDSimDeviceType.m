@@ -6,7 +6,7 @@
 MD_PROXY_IGNORED_IMPL_BEGIN
 @implementation MDSimDeviceType
 
-@dynamic bundle, modelIdentifier;
+@dynamic modelIdentifier;
 
 MD_PROXY_LOOKUP_TARGET_CLASS_IMPL(SimDeviceType)
 

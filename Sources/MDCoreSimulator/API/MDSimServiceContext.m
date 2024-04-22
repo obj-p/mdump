@@ -6,8 +6,6 @@
 MD_PROXY_IGNORED_IMPL_BEGIN
 @implementation MDSimServiceContext
 
-@dynamic supportedDeviceTypes;
-
 MD_PROXY_LOOKUP_TARGET_CLASS_IMPL(SimServiceContext)
 
 + (instancetype)sharedServiceContextForDeveloperDir:(NSString *)dir error:(NSError **)error

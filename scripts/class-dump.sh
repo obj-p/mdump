@@ -2,7 +2,12 @@
 
 set -eo pipefail
 
+ARCH="${ARCH:-ARM64}
 CONTENTS_DIR="${CONTENTS_DIR:-/Applications/Xcode.app/Contents}"
+
+PRIVATE_FRAMEWORKS=(
+
+)
 
 # /Library/Developer/PrivateFrameworks/CoreDeviceAction.framework
 # /Library/Developer/PrivateFrameworks/CoreDevice.framework
