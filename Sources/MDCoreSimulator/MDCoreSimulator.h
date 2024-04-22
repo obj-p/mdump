@@ -1,5 +1,4 @@
 #import <MDFramework/MDFramework.h>
-
 #import <MDCoreSimulator/MDSimDeviceType.h>
 #import <MDCoreSimulator/MDSimServiceContext.h>
 #import <MDCoreSimulator/MDSimProfileBundle.h>

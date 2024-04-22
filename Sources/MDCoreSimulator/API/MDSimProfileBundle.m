@@ -9,6 +9,10 @@ MD_PROXY_IGNORED_IMPL_BEGIN
 
 MD_PROXY_LOOKUP_TARGET_CLASS_IMPL(SimProfileBundle)
 
++ (NSDictionary *)extraCheckMap {
+    return [self.targetClass extraCheckMap];
+}
+
 - (instancetype)initWithPath:(NSString *)path error:(NSError **)error
 {
     id target = [[self.class.targetClass alloc] initWithPath:path error:error];
