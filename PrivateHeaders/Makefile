@@ -23,8 +23,14 @@ all: $(targets)
 clean:
 	@rm -R -- */
 
+.PHONY: list-frameworks
+list-frameworks:
+	@printf '%s\n' $(frameworks) | sort -n
+
 .PHONY: list-targets
 list-targets:
 	@printf '%s\n' $(targets) | sort -n
+
+# ipsw swift-dump /Applications/Xcode.app/Contents/SharedFrameworks/PreviewsXcodeUI.framework/Versions/Current/PreviewsXcodeUI
 
 $(foreach framework, $(frameworks), $(eval $(call framework_dump_rule,$(basename $(notdir $(framework))),$(framework))))
