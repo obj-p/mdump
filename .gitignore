@@ -1,7 +1,8 @@
-## Class Dump
-PrivateHeaders/*
-!PrivateHeaders/Makefile
-!PrivateHeaders/README.md
+## Dumps
+
+Dumps/*
+!Dumps/Makefile
+!Dumps/README.md
 
 ## Homebrew
 

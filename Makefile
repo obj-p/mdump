@@ -1,3 +1,11 @@
+.PHONY: all
+all: clean
+	@$(MAKE) xcodeproj
+
+.PHONY: clean
+clean:
+	@rm -rf mdump.xcodeproj
+
 ## Contributing
 
 .PHONY: brew
@@ -12,5 +20,4 @@ pre-commit-install:
 
 .PHONY: xcodeproj
 xcodeproj:
-	@rm -rf mdump.xcodeproj
 	@xcodegen
